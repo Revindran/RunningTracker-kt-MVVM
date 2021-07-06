@@ -1,0 +1,2 @@
+com/raveendran/runningapp/BuildConfig.java
+ com.raveendran.runningapp.BuildConfig

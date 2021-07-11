@@ -22,6 +22,7 @@
         android:required="true" />
 
     <application
+        android:name="com.raveendran.runningapp.BaseApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -32,7 +33,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.raveendran.runningapp.MainActivity"
+            android:name="com.raveendran.runningapp.ui.MainActivity"
             android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

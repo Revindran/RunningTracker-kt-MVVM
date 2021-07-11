@@ -12,6 +12,10 @@
         "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\drawable\\ic_directions_run_black_24dp.xml"
     },
     {
+        "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
         "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_run.xml.flat",
         "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\layout\\item_run.xml"
+    },
+    {
+        "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
         "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",

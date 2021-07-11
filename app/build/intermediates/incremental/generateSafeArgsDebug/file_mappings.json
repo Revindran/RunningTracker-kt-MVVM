@@ -1,1 +1,1 @@
-[]
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.raveendran.runningapp.ui.fragments.SetUpFragmentDirections","com.raveendran.runningapp.ui.fragments.RunFragmentDirections","com.raveendran.runningapp.ui.fragments.TrackingFragmentDirections"]}]

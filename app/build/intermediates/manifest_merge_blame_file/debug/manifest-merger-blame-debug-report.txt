@@ -39,7 +39,7 @@
 22-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 23
 24    <application
-24-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:10:5-32:19
+24-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:10:5-38:19
 25        android:name="com.raveendran.runningapp.BaseApplication"
 25-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:11:9-40
 26        android:allowBackup="true"
@@ -59,81 +59,88 @@
 34        android:theme="@style/AppTheme" >
 34-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:17:9-40
 35        <activity
-35-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:9-24:20
+35-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:9-26:20
 36            android:name="com.raveendran.runningapp.ui.MainActivity"
-36-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:19-75
+36-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:19:13-69
 37            android:launchMode="singleTask" >
-37-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:76-107
+37-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:20:13-44
 38            <intent-filter>
-38-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:19:13-23:29
+38-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:21:13-25:29
 39                <action android:name="android.intent.action.MAIN" />
-39-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:20:17-69
-39-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:20:25-66
+39-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:17-69
+39-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:25-66
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:17-77
-41-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:27-74
+41-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:24:17-77
+41-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:24:27-74
 42            </intent-filter>
 43        </activity>
 44
-45        <meta-data
-45-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:26:9-28:69
-46            android:name="com.google.android.gms.version"
-46-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:27:13-58
-47            android:value="@integer/google_play_services_version" />
-47-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:28:13-66
-48        <meta-data
-48-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:29:9-31:55
-49            android:name="com.google.android.geo.API_KEY"
-49-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:30:13-58
-50            android:value="@string/google_maps_key" />
-50-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:31:13-52
-51
-52        <activity
-52-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:12:9-16:66
-53            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
-53-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:13:13-86
-54            android:exported="false"
-54-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:14:13-37
-55            android:label=""
-55-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:15:13-29
-56            android:theme="@style/EasyPermissions.Transparent" />
-56-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:16:13-63
-57
-58        <service
-58-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
-59            android:name="androidx.room.MultiInstanceInvalidationService"
-59-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
-60            android:directBootAware="true"
-60-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
-61            android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
-61-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
-62        <uses-library
-62-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-63            android:name="org.apache.http.legacy"
-63-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-64            android:required="false" />
-64-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-65
-66        <activity
-66-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-67            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-67-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-68            android:exported="false"
-68-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-69            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-69-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-70
-71        <provider
-71-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-72            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-72-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
-73            android:authorities="com.raveendran.runningapp.lifecycle-process"
-73-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-74            android:exported="false"
-74-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-75            android:multiprocess="true" />
-75-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
-76    </application>
-77
-78</manifest>
+45        <service
+45-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:28:9-30:56
+46            android:name="com.raveendran.runningapp.services.TrackingService"
+46-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:29:13-53
+47            android:foregroundServiceType="location" />
+47-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:30:13-53
+48
+49        <meta-data
+49-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:32:9-34:69
+50            android:name="com.google.android.gms.version"
+50-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:33:13-58
+51            android:value="@integer/google_play_services_version" />
+51-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:34:13-66
+52        <meta-data
+52-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:35:9-37:55
+53            android:name="com.google.android.geo.API_KEY"
+53-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:36:13-58
+54            android:value="@string/google_maps_key" />
+54-->R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:37:13-52
+55
+56        <activity
+56-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:12:9-16:66
+57            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+57-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:13:13-86
+58            android:exported="false"
+58-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:14:13-37
+59            android:label=""
+59-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:15:13-29
+60            android:theme="@style/EasyPermissions.Transparent" />
+60-->[pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:16:13-63
+61
+62        <service
+62-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+63            android:name="androidx.room.MultiInstanceInvalidationService"
+63-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+64            android:directBootAware="true"
+64-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+65            android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
+65-->[androidx.room:room-runtime:2.2.5] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\d675cfcfd90bae26a054ab62beba683e\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+66        <uses-library
+66-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+67            android:name="org.apache.http.legacy"
+67-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+68            android:required="false" />
+68-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\8131b599071bb980aaf8a1191650ca4e\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+69
+70        <activity
+70-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+71            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+71-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+72            android:exported="false"
+72-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00455927478f842b6ff81a40257d3c45\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+74
+75        <provider
+75-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+76            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+77            android:authorities="com.raveendran.runningapp.lifecycle-process"
+77-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+78            android:exported="false"
+78-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+79            android:multiprocess="true" />
+79-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\e493e1ad010f8f03bf5d6ac058c073af\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+80    </application>
+81
+82</manifest>

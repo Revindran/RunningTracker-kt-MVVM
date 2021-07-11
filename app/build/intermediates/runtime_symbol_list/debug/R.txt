@@ -1635,6 +1635,7 @@ int id action_bar_title 0x7f090031
 int id action_container 0x7f090032
 int id action_context_bar 0x7f090033
 int id action_divider 0x7f090034
+int id action_global_trackingFragment 0x7f090179
 int id action_image 0x7f090035
 int id action_menu_divider 0x7f090036
 int id action_menu_presenter 0x7f090037

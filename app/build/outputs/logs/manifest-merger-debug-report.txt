@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [com.google.dagger:dagger-android-support:2.28.1] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\80269b807bea4cacdc781e2e8d62d494\jetified-dagger-android-support-2.28.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.dagger:dagger-android:2.35.1] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\ad44e7ea62fcce2537f06cd89b44c0e1\jetified-dagger-android-2.35.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7c399a2b63e9d5b8926369af91439aeb\navigation-ui-ktx-2.3.0\AndroidManifest.xml:17:1-24:12
@@ -77,20 +77,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Raveendran\.grad
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7f51dcfeae28e13bfde02ee0b8ae73d1\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\a8c3932d6edb353f009f5170f7703621\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\00f04ecbaa91efc0ec08b442929da06e\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
 		INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:2:11-69
@@ -111,7 +111,7 @@ ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml
 	android:name
 		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:8:22-74
 application
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:10:5-32:19
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:10:5-38:19
 MERGED from [com.google.android.material:material:1.3.0-alpha01] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\3340dc0128dec1b42e9b3018e61153d3\material-1.3.0-alpha01\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha01] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\3340dc0128dec1b42e9b3018e61153d3\material-1.3.0-alpha01\AndroidManifest.xml:22:5-20
 MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\7716894fba26b6d0c13e3e699e268812\jetified-easypermissions-3.0.0\AndroidManifest.xml:11:5-17:19
@@ -163,35 +163,41 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ra
 	android:name
 		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.raveendran.runningapp.ui.MainActivity
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:9-26:20
 	android:launchMode
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:76-107
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:20:13-44
 	android:name
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:18:19-75
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:19:13-69
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:24:27-74
+service#com.raveendran.runningapp.services.TrackingService
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:28:9-30:56
+	android:foregroundServiceType
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:30:13-53
+	android:name
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:29:13-53
 meta-data#com.google.android.gms.version
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:26:9-28:69
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:32:9-34:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\181700f87453e36ea79726a93d6ac03b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Raveendran\.gradle\caches\transforms-2\files-2.1\181700f87453e36ea79726a93d6ac03b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:28:13-66
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:34:13-66
 	android:name
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:27:13-58
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:33:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:29:9-31:55
+ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:35:9-37:55
 	android:value
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:31:13-52
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:37:13-52
 	android:name
-		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:30:13-58
+		ADDED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml:36:13-58
 uses-sdk
 INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from R:\Development\Kotlin\RunningAppMVVM\app\src\main\AndroidManifest.xml

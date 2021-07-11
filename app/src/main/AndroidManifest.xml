@@ -15,13 +15,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.raveendran.runningapp.ui.MainActivity" android:launchMode="singleTask">
+        <activity
+            android:name="com.raveendran.runningapp.ui.MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".services.TrackingService"
+            android:foregroundServiceType="location" />
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -18,6 +18,7 @@ import com.raveendran.runningapp.utils.Constants.ACTION_START_OR_RESUME_SERVICE
 import com.raveendran.runningapp.utils.Constants.MAP_ZOOM
 import com.raveendran.runningapp.utils.Constants.POLYLINE_COLOR
 import com.raveendran.runningapp.utils.Constants.POLYLINE_WIDTH
+import com.raveendran.runningapp.utils.TrackingUtility
 import kotlinx.android.synthetic.main.fragment_tracking.*
 
 class TrackingFragment : Fragment(R.layout.fragment_tracking) {
@@ -28,6 +29,9 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
 
     private var isTracking = false
     private var pathPoints = mutableListOf<polyLine>()
+
+
+    private var currentTimeInMillis = 0L
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,7 +51,6 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     }
 
 
-
     private fun subscribeToObservers() {
 
         TrackingService.isTracking.observe(viewLifecycleOwner, Observer {
@@ -58,6 +61,12 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
             pathPoints = it
             addLatestPolyLine()
             moveCameraToUser()
+        })
+
+        TrackingService.timeRunInMillis.observe(viewLifecycleOwner, Observer {
+            currentTimeInMillis = it
+            val formattedTime = TrackingUtility.getFormattedTimeWatchTime(currentTimeInMillis, true)
+            tvTimer.text = formattedTime
         })
     }
 

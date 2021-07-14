@@ -23,8 +23,8 @@ public final class Constants {
     public static final long LOCATION_UPDATE_INTERVAL = 5000L;
     public static final long FASTEST_UPDATE_INTERVAL = 2000L;
     public static final int POLYLINE_COLOR = android.graphics.Color.RED;
-    public static final float POLYLINE_WIDTH = 8.0F;
-    public static final float MAP_ZOOM = 15.0F;
+    public static final float POLYLINE_WIDTH = 16.0F;
+    public static final float MAP_ZOOM = 18.0F;
     public static final long TIME_UPDATE_INTERVAL = 50L;
     public static final com.raveendran.runningapp.utils.Constants INSTANCE = null;
     

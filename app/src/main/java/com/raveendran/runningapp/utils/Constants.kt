@@ -21,8 +21,8 @@ object Constants {
     const val FASTEST_UPDATE_INTERVAL = 2000L
 
     const val POLYLINE_COLOR = Color.RED
-    const val POLYLINE_WIDTH = 8f
-    const val MAP_ZOOM = 15f
+    const val POLYLINE_WIDTH = 16f
+    const val MAP_ZOOM = 18f
 
     const val TIME_UPDATE_INTERVAL = 50L
 }

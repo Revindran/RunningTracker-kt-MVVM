@@ -10,9 +10,12 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.PolylineOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.raveendran.runningapp.R
+import com.raveendran.runningapp.db.Run
 import com.raveendran.runningapp.services.Polyline
 import com.raveendran.runningapp.services.TrackingService
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel
@@ -25,6 +28,8 @@ import com.raveendran.runningapp.utils.Constants.POLYLINE_WIDTH
 import com.raveendran.runningapp.utils.TrackingUtility
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tracking.*
+import java.util.*
+import kotlin.math.round
 
 @AndroidEntryPoint
 class TrackingFragment : Fragment(R.layout.fragment_tracking) {
@@ -39,6 +44,8 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     private var curTimeInMillis = 0L
 
     private var menu: Menu? = null
+
+    private var weight = 80f
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,6 +65,12 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
         mapView.getMapAsync {
             map = it
             addAllPolylines()
+        }
+
+        btnFinishRun.setOnClickListener {
+            zoomToSeeWholeMap()
+            endRunAndSaveToDb()
+            stopRun()
         }
 
         subscribeToObservers()
@@ -98,13 +111,13 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
 
     override fun onPrepareOptionsMenu(menu: Menu) {
         super.onPrepareOptionsMenu(menu)
-        if(curTimeInMillis > 0L) {
+        if (curTimeInMillis > 0L) {
             this.menu?.getItem(0)?.isVisible = true
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.niCancelTracking -> showCancelDialog()
         }
         return super.onOptionsItemSelected(item)
@@ -151,6 +164,49 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
                     MAP_ZOOM
                 )
             )
+        }
+    }
+
+    private fun zoomToSeeWholeMap() {
+        val bounds = LatLngBounds.Builder()
+
+        for (polyline in pathPoints) {
+            for (pos in polyline) {
+                bounds.include(pos)
+            }
+        }
+
+        map?.moveCamera(
+            CameraUpdateFactory.newLatLngBounds(
+                bounds.build(),
+                mapView.height,
+                mapView.width,
+                (mapView.height * 0.05f).toInt()
+            )
+        )
+    }
+
+
+    private fun endRunAndSaveToDb() {
+        map?.snapshot { bmp ->
+            var distanceInMeter = 0
+            for (polyline in pathPoints) {
+                distanceInMeter = TrackingUtility.calculatePolylineLength(polyline).toInt()
+            }
+
+            val avgSpeed =
+                round((distanceInMeter / 1000f) / (curTimeInMillis / 1000f / 60 / 60) * 10) / 10f
+            val dateTimeStamp = Calendar.getInstance().timeInMillis
+            val caloriesBurned = ((distanceInMeter / 1000f) * weight).toInt()
+            val run =
+                Run(bmp, dateTimeStamp, curTimeInMillis, avgSpeed, distanceInMeter, caloriesBurned)
+            viewModel.insertRun(run)
+            Snackbar.make(
+                requireActivity().findViewById(R.id.rootView),
+                "Run Successfully saved in DB",
+                Snackbar.LENGTH_LONG
+            ).show()
+
         }
     }
 

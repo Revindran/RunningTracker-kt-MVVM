@@ -1804,6 +1804,7 @@ id nav_graph
 id nav_host_fragment_container
 id navigation_header_container
 id never
+id niCancelTracking
 id noScroll
 id none
 id normal
@@ -2099,6 +2100,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav_menu
+menu menu_tracking_run
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph

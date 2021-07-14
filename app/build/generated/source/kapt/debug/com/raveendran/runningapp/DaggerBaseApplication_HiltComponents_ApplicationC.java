@@ -1,24 +1,33 @@
 package com.raveendran.runningapp;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.view.View;
+import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.hilt.lifecycle.ViewModelAssistedFactory;
 import androidx.hilt.lifecycle.ViewModelFactoryModules_ActivityModule_ProvideFactoryFactory;
 import androidx.hilt.lifecycle.ViewModelFactoryModules_FragmentModule_ProvideFactoryFactory;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.raveendran.runningapp.db.RunDAO;
 import com.raveendran.runningapp.db.RunnerDatabase;
 import com.raveendran.runningapp.di.AppModule;
 import com.raveendran.runningapp.di.AppModule_ProvideRunDaoFactory;
 import com.raveendran.runningapp.di.AppModule_ProvideRunnerDatabaseFactory;
+import com.raveendran.runningapp.di.ServiceModule_ProvideBaseNotificationBuilderFactory;
+import com.raveendran.runningapp.di.ServiceModule_ProvideFusedLocationProviderClientFactory;
+import com.raveendran.runningapp.di.ServiceModule_ProvideMainActivityPendingIntentFactory;
 import com.raveendran.runningapp.repositories.MainRepository;
+import com.raveendran.runningapp.services.TrackingService;
+import com.raveendran.runningapp.services.TrackingService_MembersInjector;
 import com.raveendran.runningapp.ui.MainActivity;
 import com.raveendran.runningapp.ui.fragments.RunFragment;
 import com.raveendran.runningapp.ui.fragments.SettingsFragment;
 import com.raveendran.runningapp.ui.fragments.StatisticsFragment;
+import com.raveendran.runningapp.ui.fragments.TrackingFragment;
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel_AssistedFactory;
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel_AssistedFactory_Factory;
 import com.raveendran.runningapp.ui.viewmodels.StatisticsViewModel_AssistedFactory;
@@ -288,6 +297,10 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
         }
 
         @Override
+        public void injectTrackingFragment(TrackingFragment trackingFragment) {
+        }
+
+        @Override
         public Set<ViewModelProvider.Factory> getFragmentViewModelFactory() {
           return Collections.<ViewModelProvider.Factory>singleton(getProvideFactory());
         }
@@ -386,8 +399,67 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
   }
 
   private final class ServiceCImpl extends BaseApplication_HiltComponents.ServiceC {
+    private volatile Object fusedLocationProviderClient = new MemoizedSentinel();
+
+    private volatile Object pendingIntent = new MemoizedSentinel();
+
+    private volatile Object notificationCompatBuilder = new MemoizedSentinel();
+
     private ServiceCImpl(Service service) {
 
+    }
+
+    private FusedLocationProviderClient getFusedLocationProviderClient() {
+      Object local = fusedLocationProviderClient;
+      if (local instanceof MemoizedSentinel) {
+        synchronized (local) {
+          local = fusedLocationProviderClient;
+          if (local instanceof MemoizedSentinel) {
+            local = ServiceModule_ProvideFusedLocationProviderClientFactory.provideFusedLocationProviderClient(ApplicationContextModule_ProvideContextFactory.provideContext(DaggerBaseApplication_HiltComponents_ApplicationC.this.applicationContextModule));
+            fusedLocationProviderClient = DoubleCheck.reentrantCheck(fusedLocationProviderClient, local);
+          }
+        }
+      }
+      return (FusedLocationProviderClient) local;
+    }
+
+    private PendingIntent getPendingIntent() {
+      Object local = pendingIntent;
+      if (local instanceof MemoizedSentinel) {
+        synchronized (local) {
+          local = pendingIntent;
+          if (local instanceof MemoizedSentinel) {
+            local = ServiceModule_ProvideMainActivityPendingIntentFactory.provideMainActivityPendingIntent(ApplicationContextModule_ProvideContextFactory.provideContext(DaggerBaseApplication_HiltComponents_ApplicationC.this.applicationContextModule));
+            pendingIntent = DoubleCheck.reentrantCheck(pendingIntent, local);
+          }
+        }
+      }
+      return (PendingIntent) local;
+    }
+
+    private NotificationCompat.Builder getNotificationCompatBuilder() {
+      Object local = notificationCompatBuilder;
+      if (local instanceof MemoizedSentinel) {
+        synchronized (local) {
+          local = notificationCompatBuilder;
+          if (local instanceof MemoizedSentinel) {
+            local = ServiceModule_ProvideBaseNotificationBuilderFactory.provideBaseNotificationBuilder(ApplicationContextModule_ProvideContextFactory.provideContext(DaggerBaseApplication_HiltComponents_ApplicationC.this.applicationContextModule), getPendingIntent());
+            notificationCompatBuilder = DoubleCheck.reentrantCheck(notificationCompatBuilder, local);
+          }
+        }
+      }
+      return (NotificationCompat.Builder) local;
+    }
+
+    @Override
+    public void injectTrackingService(TrackingService trackingService) {
+      injectTrackingService2(trackingService);
+    }
+
+    private TrackingService injectTrackingService2(TrackingService instance) {
+      TrackingService_MembersInjector.injectFusedLocationProviderClient(instance, getFusedLocationProviderClient());
+      TrackingService_MembersInjector.injectBaseNotificationBuilder(instance, getNotificationCompatBuilder());
+      return instance;
     }
   }
 }

@@ -2,10 +2,13 @@ package com.raveendran.runningapp;
 
 import androidx.hilt.lifecycle.ViewModelFactoryModules;
 import com.raveendran.runningapp.di.AppModule;
+import com.raveendran.runningapp.di.ServiceModule;
+import com.raveendran.runningapp.services.TrackingService_GeneratedInjector;
 import com.raveendran.runningapp.ui.MainActivity_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.RunFragment_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.SettingsFragment_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.StatisticsFragment_GeneratedInjector;
+import com.raveendran.runningapp.ui.fragments.TrackingFragment_GeneratedInjector;
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel_HiltModule;
 import com.raveendran.runningapp.ui.viewmodels.StatisticsViewModel_HiltModule;
 import dagger.Binds;
@@ -172,6 +175,7 @@ public final class BaseApplication_HiltComponents {
   public abstract static class FragmentC implements RunFragment_GeneratedInjector,
       SettingsFragment_GeneratedInjector,
       StatisticsFragment_GeneratedInjector,
+      TrackingFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,
@@ -181,9 +185,12 @@ public final class BaseApplication_HiltComponents {
     }
   }
 
-  @Subcomponent
+  @Subcomponent(
+      modules = ServiceModule.class
+  )
   @ServiceScoped
-  public abstract static class ServiceC implements ServiceComponent,
+  public abstract static class ServiceC implements TrackingService_GeneratedInjector,
+      ServiceComponent,
       GeneratedComponent {
     @Subcomponent.Builder
     abstract interface Builder extends ServiceComponentBuilder {

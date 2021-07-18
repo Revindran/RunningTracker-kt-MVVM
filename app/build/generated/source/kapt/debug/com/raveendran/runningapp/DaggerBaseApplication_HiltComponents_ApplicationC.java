@@ -3,6 +3,7 @@ package com.raveendran.runningapp;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.SharedPreferences;
 import android.view.View;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,7 @@ import com.raveendran.runningapp.db.RunnerDatabase;
 import com.raveendran.runningapp.di.AppModule;
 import com.raveendran.runningapp.di.AppModule_ProvideRunDaoFactory;
 import com.raveendran.runningapp.di.AppModule_ProvideRunnerDatabaseFactory;
+import com.raveendran.runningapp.di.AppModule_ProvideSharedPreferencesFactory;
 import com.raveendran.runningapp.di.ServiceModule_ProvideBaseNotificationBuilderFactory;
 import com.raveendran.runningapp.di.ServiceModule_ProvideFusedLocationProviderClientFactory;
 import com.raveendran.runningapp.di.ServiceModule_ProvideMainActivityPendingIntentFactory;
@@ -25,9 +27,13 @@ import com.raveendran.runningapp.services.TrackingService;
 import com.raveendran.runningapp.services.TrackingService_MembersInjector;
 import com.raveendran.runningapp.ui.MainActivity;
 import com.raveendran.runningapp.ui.fragments.RunFragment;
+import com.raveendran.runningapp.ui.fragments.SetUpFragment;
+import com.raveendran.runningapp.ui.fragments.SetUpFragment_MembersInjector;
 import com.raveendran.runningapp.ui.fragments.SettingsFragment;
+import com.raveendran.runningapp.ui.fragments.SettingsFragment_MembersInjector;
 import com.raveendran.runningapp.ui.fragments.StatisticsFragment;
 import com.raveendran.runningapp.ui.fragments.TrackingFragment;
+import com.raveendran.runningapp.ui.fragments.TrackingFragment_MembersInjector;
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel_AssistedFactory;
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel_AssistedFactory_Factory;
 import com.raveendran.runningapp.ui.viewmodels.StatisticsViewModel_AssistedFactory;
@@ -66,6 +72,12 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
 
   private volatile Object runDAO = new MemoizedSentinel();
 
+  private volatile Object sharedPreferences = new MemoizedSentinel();
+
+  private volatile Object b = new MemoizedSentinel();
+
+  private volatile Object f = new MemoizedSentinel();
+
   private DaggerBaseApplication_HiltComponents_ApplicationC(
       ApplicationContextModule applicationContextModuleParam) {
     this.applicationContextModule = applicationContextModuleParam;
@@ -101,6 +113,48 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
       }
     }
     return (RunDAO) local;
+  }
+
+  private SharedPreferences getSharedPreferences() {
+    Object local = sharedPreferences;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = sharedPreferences;
+        if (local instanceof MemoizedSentinel) {
+          local = AppModule_ProvideSharedPreferencesFactory.provideSharedPreferences(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          sharedPreferences = DoubleCheck.reentrantCheck(sharedPreferences, local);
+        }
+      }
+    }
+    return (SharedPreferences) local;
+  }
+
+  private boolean getB() {
+    Object local = b;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = b;
+        if (local instanceof MemoizedSentinel) {
+          local = AppModule.INSTANCE.provideFirstTimeToggle(getSharedPreferences());
+          b = DoubleCheck.reentrantCheck(b, local);
+        }
+      }
+    }
+    return (boolean) local;
+  }
+
+  private float getF() {
+    Object local = f;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = f;
+        if (local instanceof MemoizedSentinel) {
+          local = AppModule.INSTANCE.provideWeight(getSharedPreferences());
+          f = DoubleCheck.reentrantCheck(f, local);
+        }
+      }
+    }
+    return (float) local;
   }
 
   @Override
@@ -289,7 +343,13 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
         }
 
         @Override
+        public void injectSetUpFragment(SetUpFragment setUpFragment) {
+          injectSetUpFragment2(setUpFragment);
+        }
+
+        @Override
         public void injectSettingsFragment(SettingsFragment settingsFragment) {
+          injectSettingsFragment2(settingsFragment);
         }
 
         @Override
@@ -298,6 +358,7 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
 
         @Override
         public void injectTrackingFragment(TrackingFragment trackingFragment) {
+          injectTrackingFragment2(trackingFragment);
         }
 
         @Override
@@ -308,6 +369,22 @@ public final class DaggerBaseApplication_HiltComponents_ApplicationC extends Bas
         @Override
         public ViewWithFragmentComponentBuilder viewWithFragmentComponentBuilder() {
           return new ViewWithFragmentCBuilder();
+        }
+
+        private SetUpFragment injectSetUpFragment2(SetUpFragment instance) {
+          SetUpFragment_MembersInjector.injectSharedPref(instance, DaggerBaseApplication_HiltComponents_ApplicationC.this.getSharedPreferences());
+          SetUpFragment_MembersInjector.injectSetFirstAppOpen(instance, DaggerBaseApplication_HiltComponents_ApplicationC.this.getB());
+          return instance;
+        }
+
+        private SettingsFragment injectSettingsFragment2(SettingsFragment instance) {
+          SettingsFragment_MembersInjector.injectSharedPreferences(instance, DaggerBaseApplication_HiltComponents_ApplicationC.this.getSharedPreferences());
+          return instance;
+        }
+
+        private TrackingFragment injectTrackingFragment2(TrackingFragment instance) {
+          TrackingFragment_MembersInjector.injectSetWeight(instance, DaggerBaseApplication_HiltComponents_ApplicationC.this.getF());
+          return instance;
         }
 
         private final class ViewWithFragmentCBuilder implements BaseApplication_HiltComponents.ViewWithFragmentC.Builder {

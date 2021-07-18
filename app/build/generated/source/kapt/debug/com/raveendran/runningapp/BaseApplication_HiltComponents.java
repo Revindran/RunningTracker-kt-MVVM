@@ -6,6 +6,7 @@ import com.raveendran.runningapp.di.ServiceModule;
 import com.raveendran.runningapp.services.TrackingService_GeneratedInjector;
 import com.raveendran.runningapp.ui.MainActivity_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.RunFragment_GeneratedInjector;
+import com.raveendran.runningapp.ui.fragments.SetUpFragment_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.SettingsFragment_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.StatisticsFragment_GeneratedInjector;
 import com.raveendran.runningapp.ui.fragments.TrackingFragment_GeneratedInjector;
@@ -173,6 +174,7 @@ public final class BaseApplication_HiltComponents {
   )
   @FragmentScoped
   public abstract static class FragmentC implements RunFragment_GeneratedInjector,
+      SetUpFragment_GeneratedInjector,
       SettingsFragment_GeneratedInjector,
       StatisticsFragment_GeneratedInjector,
       TrackingFragment_GeneratedInjector,

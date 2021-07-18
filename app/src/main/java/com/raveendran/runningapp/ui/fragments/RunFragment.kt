@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.raveendran.runningapp.R
 import com.raveendran.runningapp.adapters.RunAdapter
+import com.raveendran.runningapp.db.Run
 import com.raveendran.runningapp.ui.viewmodels.MainViewModel
 import com.raveendran.runningapp.utils.Constants.LOCATION_ACCESS_REQUEST_CODE
 import com.raveendran.runningapp.utils.SortType
@@ -41,6 +42,7 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
             SortType.CALORIES_BURNED -> spFilter.setSelection(4)
         }
 
+
         spFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {}
 
@@ -67,6 +69,10 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
         fab.setOnClickListener {
             findNavController().navigate(R.id.action_runFragment_to_trackingFragment2)
         }
+    }
+
+    fun deleteRun(run: Run) {
+        viewModel.deleteRun(run)
     }
 
     private fun setupRecyclerView() = rvRuns.apply {

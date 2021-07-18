@@ -46,9 +46,17 @@ class RunAdapter : RecyclerView.Adapter<RunAdapter.RunViewHolder>() {
         return differ.currentList.size
     }
 
+
     override fun onBindViewHolder(holder: RunViewHolder, position: Int) {
         val run = differ.currentList[position]
         holder.itemView.apply {
+
+
+            setOnClickListener {
+
+            }
+
+
             Glide.with(this).load(run.img).into(ivRunImage)
 
             val calendar = Calendar.getInstance().apply {

@@ -1657,6 +1657,7 @@ int id always 0x7f090047
 int id appBarLayout 0x7f090048
 int id async 0x7f090049
 int id auto 0x7f09004a
+int id barChart 0x7f09017b
 int id barrier 0x7f09004b
 int id beginning 0x7f09004c
 int id bidirectional 0x7f09004d
@@ -1760,7 +1761,6 @@ int id left 0x7f0900ae
 int id light 0x7f0900af
 int id line1 0x7f0900b0
 int id line3 0x7f0900b1
-int id lineChart 0x7f0900b2
 int id linear 0x7f0900b3
 int id listMode 0x7f0900b4
 int id list_item 0x7f0900b5
@@ -1931,9 +1931,11 @@ int id tvAverageSpeed 0x7f090158
 int id tvAverageSpeedInfo 0x7f090159
 int id tvAvgSpeed 0x7f09015a
 int id tvCalories 0x7f09015b
+int id tvCaloriesBurned 0x7f09017c
 int id tvContinue 0x7f09015c
 int id tvDate 0x7f09015d
 int id tvDistance 0x7f09015e
+int id tvDuration 0x7f09017d
 int id tvFilterBy 0x7f09015f
 int id tvLetsGo 0x7f090160
 int id tvTime 0x7f090161
@@ -2046,6 +2048,7 @@ int layout fragment_setup 0x7f0c002f
 int layout fragment_statistics 0x7f0c0030
 int layout fragment_tracking 0x7f0c0031
 int layout item_run 0x7f0c0032
+int layout marker_view 0x7f0c0067
 int layout mtrl_alert_dialog 0x7f0c0033
 int layout mtrl_alert_dialog_actions 0x7f0c0034
 int layout mtrl_alert_dialog_title 0x7f0c0035

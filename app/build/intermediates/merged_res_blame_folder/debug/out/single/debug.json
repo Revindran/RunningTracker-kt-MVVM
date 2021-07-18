@@ -16,6 +16,10 @@
         "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
     {
+        "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\layout_marker_view.xml.flat",
+        "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\layout\\marker_view.xml"
+    },
+    {
         "merged": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "R:\\Development\\Kotlin\\RunningAppMVVM\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
